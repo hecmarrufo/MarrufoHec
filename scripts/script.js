@@ -1,4 +1,7 @@
-var requestURL = './DataBasesJSON/data1.json';
+
+var requestURL = 'https://raw.githubusercontent.com/hecmarrufo/MarrufoHec/master/DataBases/data1.json';
+// base de datos 2, uncomment para utilizar
+// var requestURL = 'https://raw.githubusercontent.com/hecmarrufo/MarrufoHec/master/DataBases/data2.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
