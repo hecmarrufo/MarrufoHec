@@ -40,7 +40,3 @@ document.addEventListener('click', function (e) {
         }
     }
 }, false);
-
-
-// var newEle = angular.element('<div class="my-blur"></div>');
-// angular.element(document.getElementById("kapis")).append(newEle)
