@@ -3,29 +3,49 @@
 <head>
     <meta charset="utf-8">
     <title>HM CONSTRUCTORES</title>
-    <script type="text/javascript" src="./scripts/script.js"></script>
-    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <link type="text/css" rel="stylesheet" href="./style/style.css">
+
 </head>
 <body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
 <div class="container">
+
     <div class="row">
-        <ul id="sidebar"></ul>
+        <ul id="sidebar" ng-repeat="x in myData.menu">
+            <li>{{x}}</li>
+        </ul>
     </div>
+
     <div class="main">
         <div id="title">
             <h1>Tablero de Indicadores</h1>
         </div>
 
-        <div id="barra">
-            <ul id="section"></ul>
+        <div id="barra" >
+            <ul id="section">
+                <li ng-repeat="x in myData.sections" id="sek-{{$index}}" class="tabs">
+                    {{x.name}}
+                </li>
+            </ul>
         </div>
 
-        <div id="kapis">
+        <div id="kapis"  ng-repeat="x in myData.sections">
+            <div class="ka" name="sek-{{$parent.$index}}" ng-repeat="y in x.kpis" >
+                {{y.name}}<br>
+                <div class="nums" >{{y.value}}
+                    <span ng-if="y.limit>=y.value" style="color: green">{{y.limit}}{{y.unit}}</span>
+                    <span ng-if="y.limit<y.value" style="color: red"> {{y.limit}}{{y.unit}}</span>
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
+    <div class="floating">+</div>
 
-<div class="floating">+</div>
-
+</div>
 </body>
 </html>

@@ -53,6 +53,7 @@ body {
     height: 110px;
     margin: 10px;
     float: left;
+    display: none;
 }
 span{
     border: solid;

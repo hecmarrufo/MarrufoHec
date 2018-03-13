@@ -2,20 +2,20 @@
 	"menu": ["Desarrollo", "Administración", "Seguridad"],
 	"sections": [
 		{
-			"name": ["Relevamiento"],
+			"name": "Relevamiento",
 			"kpis": [
 				{ "name": "Documentos", "limit": 4, "unit": "u", "value": 7},
 				{ "name": "Desvíos", "limit": 5, "unit": "%", "value": 14}
 			]
 		},
 		{
-			"name": ["Desarrollo"],
+			"name": "Desarrollo",
 			"kpis": [
 				{ "name": "Desvíos", "limit": 20, "unit": "u", "value": 14}
 			]
 		},
 		{
-			"name": ["Implementación"],
+			"name": "Implementación",
 			"kpis": [
 				{ "name": "Implementaciones", "limit": 20, "unit": "u", "value": 7},
 				{ "name": "Tasa de Reimpl.", "limit": 10, "unit": "%", "value": 11},
